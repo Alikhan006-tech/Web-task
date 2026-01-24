@@ -1,12 +1,66 @@
-import React from 'react'
+import ServiceCard from "./ServiceCard";
+import "./Services.css";
 
-function Services() {
+const services = [
+  {
+    title: "Branding & Visual Identity",
+    description: "From logos to full brand systems that communicate consistency and credibility.",
+    icon: "../src/assets/images/Branding&VisualIdentity.png",
+  },
+  {
+    title: "UI / UX & Product Design",
+    description: "Intuitive interfaces and experiences designed to engage users and drive results.",
+    icon: "../src/assets/images/UIUXdesign.png",
+  },
+  {
+    title: "Marketing & Creative Design",
+    description: "High-impact designs for social media, campaigns, presentations, and ads.",
+    icon: "../src/assets/images/Marketing&CreativeDesign.png",
+  },
+   {
+    title: "Branding & Visual Identity",
+    description: "From logos to full brand systems that communicate consistency and credibility.",
+    icon: "../src/assets/images/Branding&VisualIdentity.png",
+  },
+  {
+    title: "UI / UX & Product Design",
+    description: "Intuitive interfaces and experiences designed to engage users and drive results.",
+    icon: "../src/assets/images/UIUXdesign.png",
+  },
+  {
+    title: "Marketing & Creative Design",
+    description: "High-impact designs for social media, campaigns, presentations, and ads.",
+    icon: "../src/assets/images/Marketing&CreativeDesign.png",
+  },
+   {
+    title: "Branding & Visual Identity",
+    description: "From logos to full brand systems that communicate consistency and credibility.",
+    icon: "../src/assets/images/Branding&VisualIdentity.png",
+  },
+  {
+    title: "UI / UX & Product Design",
+    description: "Intuitive interfaces and experiences designed to engage users and drive results.",
+    icon: "../src/assets/images/UIUXdesign.png",
+  },
+  {
+    title: "Marketing & Creative Design",
+    description: "High-impact designs for social media, campaigns, presentations, and ads.",
+    icon: "../src/assets/images/Marketing&CreativeDesign.png",
+  },
+];
+
+
+
+export default function Services() {
   return (
-    <div className="pt-24 pb-12 px-6 max-w-7xl mx-auto min-h-screen">
-      <h1 className="text-4xl font-black text-center">SERVICE PAGE</h1>
-      <p className="mt-4 text-gray-500 text-center">Hero Section structure coming in Day 2.</p>
-    </div>
-  )
-}
+    <section className="services">
+      <h2 className="services-title">Our Services</h2>
 
-export default Services
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <ServiceCard key={index} {...service} />
+        ))}
+      </div>
+    </section>
+  );
+}
