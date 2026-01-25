@@ -48,13 +48,13 @@ const Header = () => {
       </div>
       
       {/* Mobile Menu Content */}
-      <div className={`${isOpen ? 'translate-x-0' : 'translate-x-full'} fixed inset-0 top-20 bg-white z-99 transition-transform duration-500 md:hidden p-8`}>
+      <div className={`${isOpen ? 'translate-x-0' : 'translate-x-full'} fixed inset-0 top-20 bg-white h-screen w-full z-99 transition-transform duration-500 md:hidden p-8`}>
         <div className="flex flex-col space-y-6 text-2xl font-bold">
            {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 to={link.path} 
-                onClick={() => setIsOpen(false)} // Click karte hi menu band ho jaye
+                onClick={() => setIsOpen(false)} 
                 className="hover:text-blue-600"
               >
                 {link.name}
