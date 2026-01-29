@@ -2,6 +2,7 @@ import { FaArrowRight, FaPlay } from "react-icons/fa";
 import About from "./About";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
@@ -72,7 +73,8 @@ const Home = () => {
           Featured Projects
         </h2>
         <Portfolio limit={3} />
-      </section>{" "}
+        <Testimonials />
+      </section>
     </div>
   );
 };
