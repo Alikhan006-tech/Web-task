@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "./Input";
 import { Textarea } from "./Textarea";
+import MapBackground from "./MapBackground";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,8 +18,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="px-6 sm:px-10 pt-32 pb-20 bg-slate-50">
-      <div className="max-w-3xl mx-auto">
+<section className="relative min-h-screen flex items-center justify-center py-20">
+       <MapBackground />
+
+<div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
+      <div className="relative z-20 w-full max-w-xl bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-xl">
         
         <p className="text-blue-600 tracking-widest uppercase text-sm mb-3">
           Contact Us
